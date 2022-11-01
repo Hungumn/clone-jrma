@@ -1,0 +1,215 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jmrafront-dev-224105-authRole",
+      "UnauthRoleArn": "arn:aws:iam::848473747636:role/amplify-jmrafront-dev-224105-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::848473747636:role/amplify-jmrafront-dev-224105-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-jmrafront-dev-224105-deployment",
+      "UnauthRoleName": "amplify-jmrafront-dev-224105-unauthRole",
+      "StackName": "amplify-jmrafront-dev-224105",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:848473747636:stack/amplify-jmrafront-dev-224105/f5d136d0-f6e7-11ec-a11e-0e8f2d11ed3d",
+      "AmplifyAppId": "dmkdwmhzkkwcl"
+    }
+  },
+  "auth": {
+    "jmrafrontaf3d9dfc": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OPTIONAL",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::848473747636:role/snsaf3d9dfc224105-dev",
+        "UserPoolId": "ap-northeast-1_iTYKShl6T",
+        "AppClientIDWeb": "6p16l0auo0t755q82ppmllkvtf",
+        "AppClientID": "1lk91hlsrfkkv2ul245csej57o",
+        "IdentityPoolId": "ap-northeast-1:dc43e579-c629-489c-a04c-765f0ab8eb40",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-1:848473747636:userpool/ap-northeast-1_iTYKShl6T",
+        "IdentityPoolName": "jmrafrontaf3d9dfc_identitypool_af3d9dfc__dev",
+        "UserPoolName": "jmrafrontaf3d9dfc_userpool_af3d9dfc"
+      },
+      "lastPushTimeStamp": "2022-10-17T06:36:06.533Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jmrafront-dev-224105-deployment/amplify-cfn-templates/auth/jmrafrontaf3d9dfc-cloudformation-template.json",
+        "logicalId": "authjmrafrontaf3d9dfc"
+      },
+      "lastPushDirHash": "/dtf4fmPW5U5MRbArd6DJ5nN0Do="
+    },
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "jmrafrontaf3d9dfc",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ],
+      "output": {
+        "JmraReadonlyGroupRole": "arn:aws:iam::848473747636:role/ap-northeast-1_iTYKShl6T-JmraReadonlyGroupRole",
+        "JmraAdminGroupRole": "arn:aws:iam::848473747636:role/ap-northeast-1_iTYKShl6T-JmraAdminGroupRole"
+      },
+      "lastPushTimeStamp": "2022-10-17T06:36:07.190Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jmrafront-dev-224105-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
+        "logicalId": "authuserPoolGroups"
+      },
+      "userPoolGroups": {
+        "service": "Cognito-UserPool-Groups",
+        "providerPlugin": "awscloudformation",
+        "dependsOn": [
+          {
+            "category": "auth",
+            "resourceName": "jmrafrontaf3d9dfc",
+            "attributes": [
+              "UserPoolId",
+              "AppClientIDWeb",
+              "AppClientID",
+              "IdentityPoolId"
+            ]
+          }
+        ]
+      },
+      "lastPushDirHash": "UhkWBqx9O88erwdbdAAtYh0oDB4="
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "service": "S3AndCloudFront",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "CloudFrontSecureURL": "https://duzrdga0osggc.cloudfront.net",
+        "S3BucketSecureURL": "https://jmraront-20220706192556-hostingbucket-dev.s3.amazonaws.com",
+        "CloudFrontOriginAccessIdentity": "E1I90LG4SE27O3",
+        "WebsiteURL": "http://jmraront-20220706192556-hostingbucket-dev.s3-website-ap-northeast-1.amazonaws.com",
+        "CloudFrontDistributionID": "E221GDVJ98ILGH",
+        "Region": "ap-northeast-1",
+        "HostingBucketName": "jmraront-20220706192556-hostingbucket-dev",
+        "CloudFrontDomainName": "duzrdga0osggc.cloudfront.net"
+      },
+      "lastPushTimeStamp": "2022-10-17T06:36:06.535Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jmrafront-dev-224105-deployment/amplify-cfn-templates/hosting/template.json",
+        "logicalId": "hostingS3AndCloudFront"
+      },
+      "lastPushDirHash": "O5NalTsIyp17YWqe3gDXCTqcuSg="
+    }
+  },
+  "storage": {
+    "s333f6ea69": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "BucketName": "jmrafront999db7b28072492fa922088284c7ff0e224105-dev",
+        "Region": "ap-northeast-1"
+      },
+      "lastPushTimeStamp": "2022-10-17T06:36:07.284Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jmrafront-dev-224105-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages333f6ea69"
+      },
+      "lastPushDirHash": "VOAfXSwt0gdFPYtRW4T0Z7ePhzg="
+    }
+  },
+  "function": {
+    "DefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "Region": "ap-northeast-1",
+        "Arn": "arn:aws:lambda:ap-northeast-1:848473747636:function:DefineAuthChallenge-dev",
+        "Name": "DefineAuthChallenge-dev",
+        "LambdaExecutionRole": "jmrafrontLambdaRolef4005d8f-dev"
+      },
+      "lastPushTimeStamp": "2022-10-17T06:36:06.537Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jmrafront-dev-224105-deployment/amplify-cfn-templates/function/DefineAuthChallenge-cloudformation-template.json",
+        "logicalId": "functionDefineAuthChallenge"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-jmrafront-dev-224105-deployment",
+        "s3Key": "amplify-builds/DefineAuthChallenge-32324878714c6c6d374c-build.zip"
+      },
+      "lastBuildTimeStamp": "2022-10-13T07:13:19.797Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-10-13T07:13:19.843Z",
+      "distZipFilename": "DefineAuthChallenge-32324878714c6c6d374c-build.zip",
+      "lastPushDirHash": "U6xWaaRQuSDyOCjGFv1jQMTcPaA="
+    },
+    "CreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "Region": "ap-northeast-1",
+        "Arn": "arn:aws:lambda:ap-northeast-1:848473747636:function:CreateAuthChallenge-dev",
+        "Name": "CreateAuthChallenge-dev",
+        "LambdaExecutionRole": "jmrafrontLambdaRole39a1c6e3-dev"
+      },
+      "lastPushTimeStamp": "2022-10-17T06:36:06.538Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jmrafront-dev-224105-deployment/amplify-cfn-templates/function/CreateAuthChallenge-cloudformation-template.json",
+        "logicalId": "functionCreateAuthChallenge"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-jmrafront-dev-224105-deployment",
+        "s3Key": "amplify-builds/CreateAuthChallenge-7567644543444953596d-build.zip"
+      },
+      "lastBuildTimeStamp": "2022-10-13T07:13:19.799Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-10-13T07:13:20.148Z",
+      "distZipFilename": "CreateAuthChallenge-7567644543444953596d-build.zip",
+      "lastPushDirHash": "DENzDNQjU4or63o5ok9hpuZ2Wak="
+    },
+    "VerifyAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "Region": "ap-northeast-1",
+        "Arn": "arn:aws:lambda:ap-northeast-1:848473747636:function:VerifyAuthChallenge-dev",
+        "Name": "VerifyAuthChallenge-dev",
+        "LambdaExecutionRole": "jmrafrontLambdaRoleae0454e5-dev"
+      },
+      "lastPushTimeStamp": "2022-10-17T06:36:06.539Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jmrafront-dev-224105-deployment/amplify-cfn-templates/function/VerifyAuthChallenge-cloudformation-template.json",
+        "logicalId": "functionVerifyAuthChallenge"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-jmrafront-dev-224105-deployment",
+        "s3Key": "amplify-builds/VerifyAuthChallenge-72326e723079382f4f4d-build.zip"
+      },
+      "lastBuildTimeStamp": "2022-10-13T07:13:19.799Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-10-13T07:13:19.854Z",
+      "distZipFilename": "VerifyAuthChallenge-72326e723079382f4f4d-build.zip",
+      "lastPushDirHash": "pwAPDCTXDwt/EFHZdnaoYqBnD9s="
+    }
+  }
+}

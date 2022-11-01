@@ -1,0 +1,10 @@
+[
+  {
+    "groupName": "JmraAdmin",
+    "precedence": 1
+  },
+  {
+    "groupName": "JmraReadonly",
+    "precedence": 2
+  }
+]

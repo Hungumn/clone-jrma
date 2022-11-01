@@ -1,0 +1,35 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jmrafront-dev-224105-authRole",
+      "UnauthRoleArn": "arn:aws:iam::848473747636:role/amplify-jmrafront-dev-224105-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::848473747636:role/amplify-jmrafront-dev-224105-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-jmrafront-dev-224105-deployment",
+      "UnauthRoleName": "amplify-jmrafront-dev-224105-unauthRole",
+      "StackName": "amplify-jmrafront-dev-224105",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:848473747636:stack/amplify-jmrafront-dev-224105/f5d136d0-f6e7-11ec-a11e-0e8f2d11ed3d",
+      "AmplifyAppId": "dmkdwmhzkkwcl"
+    },
+    "categories": {
+      "auth": {
+        "jmrafrontaf3d9dfc": {},
+        "userPoolGroups": {}
+      },
+      "function": {
+        "CreateAuthChallenge": {
+          "deploymentBucketName": "amplify-jmrafront-dev-224105-deployment",
+          "s3Key": "amplify-builds/CreateAuthChallenge-7567644543444953596d-build.zip"
+        },
+        "DefineAuthChallenge": {
+          "deploymentBucketName": "amplify-jmrafront-dev-224105-deployment",
+          "s3Key": "amplify-builds/DefineAuthChallenge-32324878714c6c6d374c-build.zip"
+        },
+        "VerifyAuthChallenge": {
+          "deploymentBucketName": "amplify-jmrafront-dev-224105-deployment",
+          "s3Key": "amplify-builds/VerifyAuthChallenge-72326e723079382f4f4d-build.zip"
+        }
+      }
+    }
+  }
+}

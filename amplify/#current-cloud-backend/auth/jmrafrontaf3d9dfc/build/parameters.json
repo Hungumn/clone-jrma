@@ -1,0 +1,69 @@
+{
+  "identityPoolName": "jmrafrontaf3d9dfc_identitypool_af3d9dfc",
+  "allowUnauthenticatedIdentities": true,
+  "resourceNameTruncated": "jmrafraf3d9dfc",
+  "userPoolName": "jmrafrontaf3d9dfc_userpool_af3d9dfc",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaConfiguration": "OPTIONAL",
+  "mfaTypes": [
+    "SMS Text Message"
+  ],
+  "smsAuthenticationMessage": "Your authentication code is {####}",
+  "smsVerificationMessage": "Your verification code is {####}",
+  "emailVerificationSubject": "Your verification code",
+  "emailVerificationMessage": "Your verification code is {####}",
+  "defaultPasswordPolicy": false,
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [],
+  "requiredAttributes": [
+    "email"
+  ],
+  "aliasAttributes": [],
+  "userpoolClientGenerateSecret": false,
+  "userpoolClientRefreshTokenValidity": 30,
+  "userpoolClientWriteAttributes": [
+    "email"
+  ],
+  "userpoolClientReadAttributes": [
+    "email"
+  ],
+  "userpoolClientLambdaRole": "jmrafraf3d9dfc_userpoolclient_lambda_role",
+  "userpoolClientSetAttributes": false,
+  "sharedId": "af3d9dfc",
+  "resourceName": "jmrafrontaf3d9dfc",
+  "authSelections": "identityPoolAndUserPool",
+  "useDefault": "manual",
+  "userPoolGroupList": [
+    "JmraAdmin",
+    "JmraReadonly"
+  ],
+  "serviceName": "Cognito",
+  "usernameCaseSensitive": false,
+  "useEnabledMfas": true,
+  "authRoleArn": {
+    "Fn::GetAtt": [
+      "AuthRole",
+      "Arn"
+    ]
+  },
+  "unauthRoleArn": {
+    "Fn::GetAtt": [
+      "UnauthRole",
+      "Arn"
+    ]
+  },
+  "breakCircularDependency": true,
+  "dependsOn": [],
+  "thirdPartyAuth": false,
+  "userPoolGroups": true,
+  "adminQueries": false,
+  "triggers": "{}",
+  "hostedUI": false,
+  "authProviders": [],
+  "parentStack": {
+    "Ref": "AWS::StackId"
+  },
+  "permissions": []
+}
